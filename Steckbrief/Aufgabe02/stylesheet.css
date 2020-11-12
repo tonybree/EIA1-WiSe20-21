@@ -1,6 +1,6 @@
-div
-{
-    align-self: center;
+.about {
+    max-width: 60%;
+    margin: auto;
     font: calibri;
 }
 
