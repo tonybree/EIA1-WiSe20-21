@@ -6,9 +6,43 @@
 
 body {
     height: 100vh;
-    background: #cfffe5;
+    display: flex;
+    background: #ffff;
 }
 
-img {
-    width: 100px;
+.memory-spiel {
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.card{
+    width: calc(33.333% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .2s;
+}
+
+.card:active {
+    transform: scale(.98);
+    transition: tansform .2s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    position: absolute;
+    backface-visibility: hidden;
 }
